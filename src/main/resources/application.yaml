@@ -1,0 +1,26 @@
+server:
+  port: 8888
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/activiti?serverTimezone=GMT
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  activiti:
+    history-level: full
+    check-process-definitions: false
+    db-history-used: true
+    database-schema-update: true
+  freemarker:
+    template-loader-path: classpath:/templates
+    suffix: .ftl
+    cache: false
+    charset: UTF-8
+    content-type: text/html
+    request-context-attribute: ctx
+    settings:
+      defaultEncoding: UTF-8
+      url_escaping_charset: UTF-8
+      locale: zh_CN
+
